@@ -1,7 +1,8 @@
-import React from 'react'
 import './App.css'
+// import useCounterStore from './components/store'
 
-const App = () => {
+const App: React.FC = () => {
+
   return (
     <div>
       
