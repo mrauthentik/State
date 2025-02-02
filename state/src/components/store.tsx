@@ -1,8 +1,8 @@
-import {create} from `zustand`
+import {create} from 'zustand'
 
 interface CounterStore{
     count: number;
-    increament: ()=> void;
+    increment: ()=> void;
     decrement: ()=> void;
 }
 
