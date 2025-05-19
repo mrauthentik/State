@@ -1,14 +1,14 @@
 import './App.css'
-// import useCounterStore from './components/store'
-import useCounterStore from './components/store';
+import React from 'react'
+import { NavBar } from './components/NavBar'
+import { Hero } from './Hero'
+
 
 const App: React.FC = () => {
- const { count, increment, decrement } = useCounterStore()
   return (
     <div>
-      <h1>Counter: {count}</h1>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>decrement</button>
+      <NavBar />
+      <Hero />
     </div>
   )
 }
