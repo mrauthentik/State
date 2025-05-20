@@ -36,7 +36,7 @@ export const Hero:React.FC = ()=>{
              </p>
 
                 <div className="sub">
-                     <button>About Me</button>
+                     <button>Shoot me a Mail</button>
 
                 </div>
 
