@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 :root{
   --white:rgb(239, 231, 231);
   --orange:rgb(255, 136, 0);
+  --stylish:"Space Grotesk", sans-serif;
 }
 *{
   font-family: 'Poppins';
@@ -8,6 +10,16 @@
   margin: 0;
   padding: 0;
 }
+
+/* Typed Cursor styling */
+ .typed-cursor{
+   font-weight: 600;
+  font-size: 50px;
+  height: 20%;
+  color: #4c0000;
+  animation: blink 0.9s infinite;
+}
+
 
 .nav-section{
   position: fixed;
@@ -56,6 +68,7 @@
   background-image: url('./assets/slide/2.jpg');
   height: 100vh;
   display: flex;
+  max-width: 100%;
   justify-content: space-between;
   .text-container{
     color: white;
@@ -64,12 +77,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
+    text-align: left;
+    width: 100%;
+    .mini{
+      text-align: left;
+      font-family: var(--stylish);
+    }
     .description{
       width:80%;
-      text-align: center;
+      text-align: left;
       font-size: 20px;
-      color: orange;
+      color: rgb(225, 203, 162);
     }
     i{
       font-size: 24px;
@@ -82,8 +101,9 @@
    
   }
    .img-container{
-      width: 20%;
-      margin-right: 7rem;
+    margin-top: 2rem;
+      width: 30%;
+      margin-right: 16.6rem;
       img{
         width: 150%;
         border: solid 2px orange;
@@ -95,13 +115,58 @@
         scale: 1.03;
       }
     }
+    button{
+      background-color: rgb(216, 210, 201);
+      color: rgb(47, 10, 108);
+      margin-top: 4rem;
+      max-width: 50%;
+      font-size: 26px;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
+      font-weight: 300;
+    }
 }
 
-.dark-mode-stroke {
-  stroke: #222; /* Your dark color */
-}
-@media (prefers-color-scheme: dark) {
-  .dark-mode-stroke {
-    stroke: #fff;
+
+
+/* Responsive style */
+@media (orientation: portrait) and (max-width: 768px) {
+  .nav-section{
+    padding: 0.3rem 2rem;
+    nav{
+      .nav-items{
+        width: 100%;
+        justify-content: space-around;
+      }
+      .cv{
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
+  .hero-section{
+    padding: 5rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    .text-container{
+      font-size: 30px;
+      .description{
+        font-size: 15px;
+      }
+    }
+    .img-container{
+      width: 50%;
+      margin-right: 0;
+     
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .typed-cursor{
+    font-size: 30px;
+  } 
+  
 }
